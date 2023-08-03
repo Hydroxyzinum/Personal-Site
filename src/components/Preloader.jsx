@@ -35,7 +35,7 @@ const Preloader = () => {
       <h1 className="preloader-hello">
         {dist.map((item, index) => {
           return (
-            <span className="hello" style={{ animationDelay: index / 4 + "s" }}>
+            <span key={index} className="hello" style={{ animationDelay: index / 4 + "s" }}>
               {item}
             </span>
           );

@@ -1,0 +1,98 @@
+@import "mixin.scss";
+@import "vars.scss";
+@import "media.scss";
+@import "utils.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  @include inter-body;
+  background-color: $coal-black;
+  overflow-x: hidden;
+}
+
+.head-container {
+  @include flex(center, flex-end);
+}
+
+.head-logo_container > p {
+  color: $dull-white;
+  font-size: 3em;
+}
+
+.head-nav {
+  display: flex;
+}
+
+.nav-btn {
+  @include inter(2em);
+  @include flex(center, center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  height: 80px;
+  flex: 1 1 33%;
+  color: $dull-white;
+  background-color: transparent;
+  border: none;
+  transition: 0.5s all;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: $dull-white;
+  color: $coal-black;
+}
+
+.nav-btn:focus {
+  background-color: $dull-white;
+  color: $coal-black;
+}
+
+.active {
+  pointer-events: none;
+  background-color: $dull-white;
+  color: $coal-black;
+}
+
+.contacts-container {
+  width: 100%;
+  color: $dull-white;
+  height: 150px;
+  background-color: $coal-black;
+}
+
+.portfolio-container {
+  width: 100%;
+  color: $dull-white;
+  height: 150px;
+  background-color: $coal-black;
+}
+
+.text-anima {
+  animation: 0.3s 0s 1 text normal both running linear;
+  text-transform: uppercase;
+}
+
+@keyframes text {
+  0% {
+    transform: translateY(-40px) scaleX(1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scaleY(1) translateY(2px);
+    opacity: 1;
+  }
+}
+
+@include large;

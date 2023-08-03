@@ -1,0 +1,50 @@
+@import "mixin.scss";
+@import "vars.scss";
+@import "media.scss";
+@import "utils.scss";
+
+
+footer {
+  margin-top: 20px;
+}
+
+.links-container {
+  @include flex(center, flex-start);
+  flex-flow: row wrap;
+  padding: 60px 120px;
+  position: relative;
+}
+
+.footer-link_block {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.link-image {
+  width: 48px;
+  height: 48px;
+}
+
+.footer-link {
+  @include flex(center, space-evenly);
+  @include inter(2rem);
+  width: 250px;
+  height: 80px;
+  padding: 5px;
+  border: 1px solid $dull-white;
+  color: $dull-white;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.5s, color 0.5s, background-color 0.5s;
+
+  &:hover {
+    transform: scale(0.97);
+    color: $coal-black;
+    background-color: $dull-white;
+  }
+}
+
+@include extraLarge;
+@include large;
+@include medium;
+@include small;

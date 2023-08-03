@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-ExtraLight.ttf");
+}
+
+@mixin inter-body {
+  font-family: "Inter-ExtraLigth", sans-serif;
+}
+
+@mixin inter($fs, $lh: inherit, $ls: 0) {
+  @include inter-body;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin flex($ai, $jc) {
+  display: flex;
+  align-items: $ai;
+  justify-content: $jc;
+}

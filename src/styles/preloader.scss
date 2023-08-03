@@ -1,0 +1,46 @@
+@import "mixin.scss";
+@import "vars.scss";
+@import "media.scss";
+@import "utils.scss";
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $coal-black;
+  color: $dull-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  z-index: 9999;
+  transition: opacity 1s ease-in-out;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+}
+
+.preloader-hello {
+  @include inter(10rem);
+  font-weight: 100;
+}
+
+.hello {
+  animation: 0.3s 0s 1 text normal both running linear;
+}
+
+@keyframes text {
+  0% {
+    transform: translateX(-40px) scaleX(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1) translateX(2px);
+    opacity: 1;
+  }
+}
+
+@include small;

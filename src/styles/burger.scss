@@ -1,0 +1,140 @@
+@import "mixin.scss";
+@import "vars.scss";
+@import "media.scss";
+@import "utils.scss";
+
+.burger-menu {
+  height: 100%;
+  display: none;
+}
+
+.burger-overlay {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  transition: 0.5s all;
+  z-index: 900;
+  width: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-filter: blur(5px);
+ -moz-filter: blur(5px); 
+-o-filter: blur(5px); 
+-ms-filter: blur(5px);
+ filter: blur(5px);
+}
+
+.burger-overlay_active {
+  display: block;
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  right: 0;
+  transition: 0.5s;
+}
+
+.burger-btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  z-index: 2000;
+}
+
+.burger-line {
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color: $dull-white;
+  transition: 0.5s;
+}
+
+.burger-line-f {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  background-color: $coal-black;
+  transform: rotate(45deg);
+  z-index: 50;
+}
+
+.burger-line-s {
+  transition: 0.1s ease-in-out;
+  opacity: 0;
+}
+
+.burger-line-t {
+  background-color: $coal-black;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  transition: 0.5s ease-in-out;
+  transform: rotate(-45deg);
+  z-index: 50;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  padding: 40px;
+  right: -50%;
+  transition: 1s all;
+  background-color: $dull-white;
+  z-index: 1000;
+  opacity: 0;
+  width: 0;
+  height: 100vh;
+}
+
+.burger-buttons {
+  margin-top: 120px;
+}
+
+.burger-nav_btn {
+  @include inter(2em);
+  @include flex(center, center);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  height: 80px;
+  flex: 1 1 33%;
+  color: $coal-black;
+  background-color: transparent;
+  border: none;
+  transition: 0.5s all;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.active-burger_nav_btn {
+  pointer-events: none;
+  background-color: $coal-black;
+  color: $dull-white;
+}
+
+.burger-nav_btn:hover {
+  background-color: $coal-black;
+  color: $dull-white;
+}
+
+.burger-nav_btn:focus {
+  background-color: $coal-black;
+  color: $dull-white;
+}
+
+.active-menu {
+  display: block;
+  opacity: 1;
+  width: 50%;
+  height: 100vh;
+  right: 0;
+  transition: 1s;
+}
+
+@include large;
+@include small;

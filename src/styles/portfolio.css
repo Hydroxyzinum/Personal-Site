@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-ExtraLight.ttf");
+}
+.p-40 {
+  padding: 40px;
+}
+
+.p-120 {
+  padding: 120px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+.protfolio-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.project-container {
+  flex: 0 1 35%;
+  height: auto;
+}
+
+.project-btn {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.project-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

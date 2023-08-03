@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-ExtraLight.ttf");
+}
+.p-40 {
+  padding: 40px;
+}
+
+.p-120 {
+  padding: 120px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+.links-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: row wrap;
+  padding: 60px 120px;
+  position: relative;
+}
+
+.footer-link_block {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.link-image {
+  width: 48px;
+  height: 48px;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Inter-ExtraLigth", sans-serif;
+  font-size: 2rem;
+  line-height: inherit;
+  letter-spacing: 0;
+  width: 250px;
+  height: 80px;
+  padding: 5px;
+  border: 1px solid #E8EAE7;
+  color: #E8EAE7;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.5s, color 0.5s, background-color 0.5s;
+}
+.footer-link:hover {
+  transform: scale(0.97);
+  color: #202124;
+  background-color: #E8EAE7;
+}
+
+@media (max-width: 1400px) {
+  .main-container > h1 {
+    font-size: 8rem;
+  }
+  .info-container {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .main-container > h1 {
+    font-size: 7rem;
+  }
+  .main-container {
+    padding: 80px;
+  }
+  .links-container {
+    padding: 80px;
+  }
+  .head-nav {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  .main-container > h1 {
+    font-size: 6rem;
+  }
+  .main-container {
+    padding: 40px;
+  }
+  .links-container {
+    padding: 40px;
+  }
+  .footer-link {
+    font-size: 1.5rem;
+    width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .main-container {
+    padding: 15px;
+    text-align: center;
+  }
+  .main-container > h1 {
+    margin: 20px 0;
+    font-size: 4rem;
+  }
+  .main-text {
+    font-size: 1.3rem;
+  }
+  .links-container {
+    justify-content: center;
+    padding: 15px 0;
+  }
+  .footer-link_block {
+    margin-right: 5px;
+  }
+  .footer-link {
+    font-size: 1.5rem;
+    width: 180px;
+  }
+  .active-menu {
+    padding: 20px;
+    width: 80%;
+  }
+  .preloader-hello {
+    font-size: 8rem;
+  }
+}

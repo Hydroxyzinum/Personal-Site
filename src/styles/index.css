@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-ExtraLight.ttf");
+}
+.p-40 {
+  padding: 40px;
+}
+
+.p-120 {
+  padding: 120px;
+}
+
+.mt-100 {
+  margin-top: 100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter-ExtraLigth", sans-serif;
+  background-color: #202124;
+  overflow-x: hidden;
+}
+
+.head-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.head-logo_container > p {
+  color: #E8EAE7;
+  font-size: 3em;
+}
+
+.head-nav {
+  display: flex;
+}
+
+.nav-btn {
+  font-family: "Inter-ExtraLigth", sans-serif;
+  font-size: 2em;
+  line-height: inherit;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 250px;
+  height: 80px;
+  flex: 1 1 33%;
+  color: #E8EAE7;
+  background-color: transparent;
+  border: none;
+  transition: 0.5s all;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background-color: #E8EAE7;
+  color: #202124;
+}
+
+.nav-btn:focus {
+  background-color: #E8EAE7;
+  color: #202124;
+}
+
+.active {
+  pointer-events: none;
+  background-color: #E8EAE7;
+  color: #202124;
+}
+
+.contacts-container {
+  width: 100%;
+  color: #E8EAE7;
+  height: 150px;
+  background-color: #202124;
+}
+
+.portfolio-container {
+  width: 100%;
+  color: #E8EAE7;
+  height: 150px;
+  background-color: #202124;
+}
+
+.text-anima {
+  animation: 0.3s 0s 1 text normal both running linear;
+  text-transform: uppercase;
+}
+
+@keyframes text {
+  0% {
+    transform: translateY(-40px) scaleX(1);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1) translateY(2px);
+    opacity: 1;
+  }
+}
+@media (max-width: 992px) {
+  .main-container > h1 {
+    font-size: 7rem;
+  }
+  .main-container {
+    padding: 80px;
+  }
+  .links-container {
+    padding: 80px;
+  }
+  .head-nav {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+}
